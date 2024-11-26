@@ -2,7 +2,7 @@
 
 ## Project Overview
 ### Problem Statement
-The goal of this project is to detect anomalies in sensor data to predict potential failures in machines.
+This project focuses on anomaly detection in time-series sensor data from industrial machinery. The goal is to develop a machine learning model that can identify abnormal sensor readings, which may indicate potential equipment failures. Early detection of these anomalies allows for predictive maintenance, preventing costly breakdowns and improving operational efficiency.
 
 ### Dataset
 The dataset contains sensor readings from various machines. The target column indicates whether an anomaly was detected.
