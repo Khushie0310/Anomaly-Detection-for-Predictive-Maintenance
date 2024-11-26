@@ -1,0 +1,34 @@
+## Predictive Data Analysis
+
+The goal of this project is to **predict anomalies** in a dataset using machine learning techniques. This section explains the process of preparing the data, training the model, and evaluating its performance.
+
+### 1. **Data Preprocessing**:
+   - **Missing Value Handling**: The dataset was cleaned by handling missing values and converting non-numeric columns to numeric values when necessary.
+   - **Feature Engineering**: Features were selected for training, and data was transformed to match the requirements of the machine learning models.
+
+### 2. **Exploratory Data Analysis (EDA)**:
+   - EDA was performed to understand the data distribution and identify correlations between features. 
+   - Key visualizations such as histograms, scatter plots, and correlation heatmaps were generated to gain insights into the dataset.
+
+### 3. **Modeling**:
+   - The **XGBoost** model was selected for anomaly detection based on its performance with tree-based methods.
+   - The model was trained on the dataset, and hyperparameters were tuned using **GridSearchCV** to find the best parameters.
+   - **Feature importance** was analyzed to identify key drivers behind the model's predictions.
+
+### 4. **Model Evaluation**:
+   - After training, the model was evaluated using metrics like **accuracy**, **precision**, **recall**, **F1-score**, and **ROC curve**.
+   - The final model achieved high performance with over 90% accuracy and strong recall, indicating its reliability in detecting anomalies.
+
+### 5. **Predictions**:
+   - Predictions were made on new, unseen data using the trained model, and the results were saved in a CSV file containing predictions and their associated probabilities.
+   - Here's an example of how to use the trained model for predictions:
+   
+   ```python
+   import joblib
+
+   # Load the trained model
+   best_model = joblib.load('best_xgb_model.pkl')
+
+   # Make predictions on new data
+   predictions = best_model.predict(new_data)
+   probabilities = best_model.predict_proba(new_data)[:, 1]
