@@ -10,12 +10,19 @@ In industrial settings, equipment failure often leads to unexpected downtime, af
 
 ## Dataset Description
 
-The dataset used for this project is sourced from [insert source]. It contains sensor data from various industrial machines with the following features:
+. The dataset includes the following columns:
 
-- **sensor1, sensor2, sensor3**: Numerical values representing sensor measurements from the machines.
-- **y**: The target variable, where `1` indicates an anomaly and `0` indicates normal operation.
+- **sensor1, sensor2, sensor3**: Continuous numerical values representing measurements from the machinery.
+- **y**: The target variable indicating whether the observation is "normal" (0) or "anomalous" (1).
 
-There are [insert number] rows and [insert number] features in the dataset.
+### Data Source:
+
+- The raw data file (`anoma_data.csv`) is located in the `data/` folder of this repository. You can download it from there.
+
+### Data Preprocessing:
+- The raw data had missing values, which were handled by removing rows with missing critical data or imputing with mean values.
+- Non-numeric columns (e.g., dates) were either dropped or converted into numeric format.
+- The final dataset used for modeling was cleaned and transformed.
 
 ## Technologies Used
 
