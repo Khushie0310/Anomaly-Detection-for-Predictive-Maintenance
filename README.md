@@ -31,9 +31,13 @@ Technologies Used
 3.Pandas: For data manipulation and preprocessing.
 
 4.NumPy: For numerical operations.
+
 5.Matplotlib and Seaborn: For data visualization (e.g., histograms, correlation heatmaps).
+
 6.Scikit-Learn: For building machine learning models (Logistic Regression, Random Forest, XGBoost) and evaluating them.
+
 7.SHAP: For model interpretability and understanding the feature importance.
+
 8.Joblib: For saving and loading the trained models.
 
 Modeling Techniques
